@@ -1,8 +1,3 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
 //Displays current time 
 var currentTimeDisplay = $("#currentDay");
 currentTimeDisplay.text(moment().format('llll'));
@@ -60,7 +55,7 @@ function init() {
     hourSixteenText.text(localStorage.getItem("hour16"));
     hourSeventeenText.text(localStorage.getItem("hour17"));
 };
-
+//Wont save if you dont have this
 init()
 
 
