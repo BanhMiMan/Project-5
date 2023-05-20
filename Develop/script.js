@@ -67,21 +67,20 @@ init()
 //Find value for current hour
 var currentHour = moment().hours();
 
-
 for (var i = 0; i < timeBlock.length; i++) {
-  //If equal to set time
+  //If equal to current hour add present
     if (timeBlock[i].dataset.time == currentHour) {
         timeBlock[i].classList.remove("past");
         timeBlock[i].classList.remove("future");
         timeBlock[i].classList.add("present");
     };
-    //If greater than set time
+    //If greater than current hour add future
     if (timeBlock[i].dataset.time > currentHour) {
         timeBlock[i].classList.remove("past");
         timeBlock[i].classList.remove("present");
         timeBlock[i].classList.add("future");
     };
-    //If less than set time
+    //If less than current hour add past
     if (timeBlock[i].dataset.time < currentHour) {
         timeBlock[i].classList.remove("present");
         timeBlock[i].classList.remove("future");
